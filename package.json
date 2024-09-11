@@ -17,6 +17,9 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "url": "https://github.com/Jubairvfx/JUI"
+  },
   "publishConfig": {},
   "jest": {
     "testEnvironment": "jsdom",
