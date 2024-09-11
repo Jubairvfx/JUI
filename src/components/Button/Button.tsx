@@ -1,9 +1,12 @@
-type props = {
-  label: string;
-};
+import "./Button.css";
 
-const Button: React.FC<props> = ({ label }) => {
-  return <div>{label}</div>;
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  label?: string;
+}
+
+const Button: React.FC<ButtonProps> = ({ label }) => {
+  return <button className="jui-btn">{label}</button>;
 };
 
 export default Button;

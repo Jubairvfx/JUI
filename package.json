@@ -1,9 +1,16 @@
 {
   "name": "@jubair_k/jui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "scripts": {},
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "rollup -c --watch",
+    "build": "rollup -c"
+  },
   "author": "Jubair",
   "license": "MIT",
   "description": "A personalised UI Library.",
@@ -17,6 +24,7 @@
     "@types/react": "^18.3.5",
     "rollup": "^4.21.2",
     "rollup-plugin-dts": "^6.1.1",
-    "rollup-plugin-postcss": "^4.0.2"
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.7.0"
   }
 }
