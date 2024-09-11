@@ -1,14 +1,17 @@
 .jui-btn {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
     padding-left: 1rem;
     padding-right: 1rem;
     border-radius: 0.75rem;
-    border-width: 1px;
     text-align: center;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
+    background-color: rgb(28, 155, 219);
+    color: #fff;
+    outline: none;
+    border: none;
 }
 
 .jui-btn:hover {
@@ -17,8 +20,13 @@
 }
 
 .jui-btn:disabled {
-    background-color: #737373;
-    border-color: #737373;
-    color: #e5e5e5;
+    background-color: #c0c0c0;
+    border-color: #c0c0c0;
+    color: #f0f0f0;
     cursor: not-allowed;
+}
+
+.jui-btn:disabled:hover {
+    box-shadow: none;
+    filter: brightness();
 }
