@@ -6,7 +6,7 @@ import {
   faGear,
   faUserTie,
   faFlag,
-  faStore,
+  faBellConcierge,
 } from "@fortawesome/free-solid-svg-icons";
 import { SliderArray } from "./types";
 import Sidebar, { SidebarProps } from "./Sidebar";
@@ -41,26 +41,29 @@ const Template = (args: SidebarProps) => {
 const sliderData: SliderArray = [
   {
     label: "Dashboard",
-    icon: <FontAwesomeIcon icon={faGauge} size="lg" />,
+    icon: <FontAwesomeIcon icon={faGauge} />,
     children: [
       {
         label: "Report",
-        icon: <FontAwesomeIcon icon={faFlag} size="lg" />,
+        icon: <FontAwesomeIcon icon={faFlag} />,
         active: true,
       },
-      { label: "Services", icon: <FontAwesomeIcon icon={faStore} size="lg" /> },
-    ],
-  },
-  {
-    label: "Settings",
-    icon: <FontAwesomeIcon icon={faGear} size="lg" />,
-    children: [
       {
-        label: "Profile",
-        icon: <FontAwesomeIcon icon={faUserTie} size="lg" />,
+        label: "Services",
+        icon: <FontAwesomeIcon icon={faBellConcierge} />,
       },
     ],
   },
+  // {
+  //   label: "Settings",
+  //   icon: <FontAwesomeIcon icon={faGear} />,
+  //   children: [
+  //     {
+  //       label: "Profile",
+  //       icon: <FontAwesomeIcon icon={faUserTie} />,
+  //     },
+  //   ],
+  // },
 ];
 
 // Define the story using StoryObj
