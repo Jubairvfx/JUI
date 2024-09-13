@@ -16,7 +16,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   sliderData,
 }) => {
   return (
-    <nav className={`jui-sidebar-wrpaer ${toggleCLass && "expand"}`}>
+    <nav className={`jui-sidebar-wrpaer ${toggleCLass ? "expand" : ""}`}>
       <ul>
         {sliderData.map((ele, ind) => (
           <li key={ele.label}>
@@ -40,9 +40,9 @@ const Sidebar: React.FC<SidebarProps> = ({
                   <path d="M12 15.6L5.4 9l1.2-1.2L12 13.2l5.4-5.4L18.6 9z" />
                 </svg>
               </div>
-              {/* {!toggleCLass && <span className="tooltiptext">{ele.label}</span>} */}
+              {!toggleCLass && <span className="tooltiptext">{ele.label}</span>}
             </a>
-            <ul className={`${menuToggle && "toggle-menu"}`}>
+            <ul className={`${menuToggle ? "toggle-menu" : ""}`}>
               {ele.children &&
                 ele.children.map((item, index) => (
                   <li key={index}>
@@ -54,9 +54,9 @@ const Sidebar: React.FC<SidebarProps> = ({
                       <div className="menu-content">
                         <span>{item.label}</span>
                       </div>
-                      {/* {!toggleCLass && (
+                      {!toggleCLass && (
                         <span className="tooltiptext">{item.label}</span>
-                      )} */}
+                      )}
                     </a>
                   </li>
                 ))}

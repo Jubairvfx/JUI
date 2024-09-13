@@ -54,16 +54,16 @@ const sliderData: SliderArray = [
       },
     ],
   },
-  // {
-  //   label: "Settings",
-  //   icon: <FontAwesomeIcon icon={faGear} />,
-  //   children: [
-  //     {
-  //       label: "Profile",
-  //       icon: <FontAwesomeIcon icon={faUserTie} />,
-  //     },
-  //   ],
-  // },
+  {
+    label: "Settings",
+    icon: <FontAwesomeIcon icon={faGear} />,
+    children: [
+      {
+        label: "Profile",
+        icon: <FontAwesomeIcon icon={faUserTie} />,
+      },
+    ],
+  },
 ];
 
 // Define the story using StoryObj

@@ -10,7 +10,7 @@
     top: 0px;
     height: 100vh;
     z-index: 98;
-    /* overflow: hidden; */
+    overflow: hidden;
     transition: width 0.5s ease;
     padding-top: 1.5rem;
     background-color: #002E6D;
@@ -121,7 +121,7 @@
 
 .jui-sidebar-wrpaer ul li ul li a.active {
     background-color: #0b1b31;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .jui-sidebar-wrpaer ul li ul li a.active:hover {
@@ -171,9 +171,9 @@
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
-    position: absolute;
+    position: fixed;
     z-index: 1;
-    left: 130%;
+    left: 80px;
 }
 
 .jui-sidebar-wrpaer ul li a .tooltiptext::after {
