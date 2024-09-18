@@ -3,28 +3,31 @@ import { SliderArray } from "./types";
 import "./Sidebar.css";
 
 export interface SidebarProps {
-  toggleCLass: boolean;
+  toggleClass: boolean;
   menuToggle: boolean;
   setMenuToggle: React.Dispatch<React.SetStateAction<boolean>>;
   sliderData: SliderArray;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({
-  toggleCLass,
+  toggleClass,
   menuToggle,
   setMenuToggle,
   sliderData,
 }) => {
   return (
-    <nav className={`jui-sidebar-wrpaer ${toggleCLass ? "expand" : ""}`}>
+    <nav className={`jui-sidebar-wrpaer ${toggleClass ? "expand" : ""}`}>
       <ul>
         {sliderData.map((ele, ind) => (
           <li key={ele.label}>
             <a
               id={`slide-${ind + 1}`}
-              onClick={() => setMenuToggle((prev) => !prev)}
+              onClick={() => {
+                setMenuToggle((prev) => !prev);
+                ele.command && ele.command();
+              }}
             >
-              {ele.icon && ele.icon}
+              {ele.icon && <span className="menu-icon-wraper">{ele.icon}</span>}
               <div className="menu-content">
                 <span>{ele.label}</span>
                 <svg
@@ -40,7 +43,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                   <path d="M12 15.6L5.4 9l1.2-1.2L12 13.2l5.4-5.4L18.6 9z" />
                 </svg>
               </div>
-              {!toggleCLass && <span className="tooltiptext">{ele.label}</span>}
+              {!toggleClass && <span className="tooltiptext">{ele.label}</span>}
             </a>
             <ul className={`${menuToggle ? "toggle-menu" : ""}`}>
               {ele.children &&
@@ -49,12 +52,17 @@ const Sidebar: React.FC<SidebarProps> = ({
                     <a
                       id={`item-${index + 1}`}
                       className={`${item.active && "active"}`}
+                      onClick={() => {
+                        item.command && item.command();
+                      }}
                     >
-                      {item.icon && item.icon}
+                      {item.icon && (
+                        <span className="menu-icon-wraper">{item.icon}</span>
+                      )}
                       <div className="menu-content">
                         <span>{item.label}</span>
                       </div>
-                      {!toggleCLass && (
+                      {!toggleClass && (
                         <span className="tooltiptext">{item.label}</span>
                       )}
                     </a>

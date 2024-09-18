@@ -29,7 +29,7 @@ const Template = (args: SidebarProps) => {
 
   return (
     <Sidebar
-      toggleCLass={args.toggleCLass}
+      toggleClass={args.toggleClass}
       menuToggle={menuToggle}
       setMenuToggle={setMenuToggle}
       sliderData={args.sliderData}
@@ -42,11 +42,13 @@ const sliderData: SliderArray = [
   {
     label: "Dashboard",
     icon: <FontAwesomeIcon icon={faGauge} />,
+    command: () => alert("Dashboard"),
     children: [
       {
         label: "Report",
         icon: <FontAwesomeIcon icon={faFlag} />,
         active: true,
+        command: () => alert("Report"),
       },
       {
         label: "Services",
@@ -70,8 +72,8 @@ const sliderData: SliderArray = [
 export const DefaultSidebar: StoryObj<typeof Sidebar> = {
   render: Template,
   args: {
-    toggleCLass: false,
-    menuToggle: false,
+    toggleClass: true,
+    menuToggle: true,
     sliderData: sliderData,
   },
 };
