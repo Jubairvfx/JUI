@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,37 +8,11 @@ import {
   faFlag,
   faBellConcierge,
 } from "@fortawesome/free-solid-svg-icons";
-import { SliderArray } from "./types";
 import Sidebar, { SidebarProps } from "./Sidebar";
+import Button from "../Button";
 
-export default {
-  title: "UI/Sidebar",
-  component: Sidebar,
-  tags: ["autodocs"],
-  parameters: { layout: "left" },
-  argTypes: {
-    toggleCLass: { control: "boolean" },
-    menuToggle: { control: "boolean" },
-    setMenuToggle: { action: "setMenuToggle" },
-    sliderData: { control: "object" },
-  },
-} as Meta<typeof Sidebar>;
-
-const Template = (args: SidebarProps) => {
-  const [menuToggle, setMenuToggle] = useState(args.menuToggle);
-
-  return (
-    <Sidebar
-      toggleClass={args.toggleClass}
-      menuToggle={menuToggle}
-      setMenuToggle={setMenuToggle}
-      sliderData={args.sliderData}
-    />
-  );
-};
-
-// Mock slider data for the story
-const sliderData: SliderArray = [
+// Sample data for testing
+const sliderData = [
   {
     label: "Dashboard",
     icon: <FontAwesomeIcon icon={faGauge} />,
@@ -68,12 +42,42 @@ const sliderData: SliderArray = [
   },
 ];
 
+// Storybook metadata
+export default {
+  title: "JUI/Sidebar",
+  component: Sidebar,
+  argTypes: {
+    toggleClass: { control: "boolean" },
+    sliderData: { control: "object" },
+  },
+} as Meta;
+
+// Template for the component stories
+const Template = (args: SidebarProps) => {
+  const [toggleClass, setToggleClass] = useState(args.toggleClass);
+
+  // Sync the state with the args control in Storybook
+  useEffect(() => {
+    setToggleClass(args.toggleClass);
+  }, [args.toggleClass]);
+
+  return (
+    <div style={{ display: "flex" }}>
+      <Sidebar {...args} toggleClass={toggleClass} />
+      <Button
+        label="Toggle Sidebar"
+        onClick={() => setToggleClass((prev) => !prev)}
+        style={{ marginLeft: "350px" }}
+      />
+    </div>
+  );
+};
+
 // Define the story using StoryObj
 export const DefaultSidebar: StoryObj<typeof Sidebar> = {
   render: Template,
   args: {
     toggleClass: true,
-    menuToggle: true,
     sliderData: sliderData,
   },
 };
