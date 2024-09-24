@@ -4,7 +4,7 @@
     font-family: "Poppins", sans-serif;
 }
 
-.jui-sidebar-wrpaer {
+.jui-sidebar-wrapper {
     position: fixed;
     width: 60px;
     top: 0px;
@@ -16,40 +16,40 @@
     background-color: #002E6D;
 }
 
-.jui-sidebar-wrpaer.expand {
+.jui-sidebar-wrapper.expand {
     width: 250px;
 }
 
-.jui-sidebar-wrpaer ul {
+.jui-sidebar-wrapper ul {
     margin: 0;
     padding: 0;
 }
 
-.jui-sidebar-wrpaer ul li {
+.jui-sidebar-wrapper ul li {
     list-style-type: none;
     display: block;
     transition: padding 0.5s ease;
     cursor: pointer;
 }
 
-.jui-sidebar-wrpaer>ul>li {
+.jui-sidebar-wrapper>ul>li {
     padding: 0rem 5px;
 }
 
-.jui-sidebar-wrpaer.expand>ul>li {
+.jui-sidebar-wrapper.expand>ul>li {
     padding: 0rem 0.8rem;
 }
 
-.jui-sidebar-wrpaer ul li ul li a {
+.jui-sidebar-wrapper ul li ul li a {
     border-radius: 5px;
     font-size: 13px;
 }
 
-.jui-sidebar-wrpaer.expand ul li ul li {
+.jui-sidebar-wrapper.expand ul li ul li {
     padding: 0rem 0rem;
 }
 
-.jui-sidebar-wrpaer ul li a {
+.jui-sidebar-wrapper ul li a {
     border-radius: 5px;
     padding: 0.8rem 1rem;
     color: #ffffff;
@@ -65,49 +65,49 @@
     font-size: 14px;
 }
 
-.jui-sidebar-wrpaer>ul>li>a {
+.jui-sidebar-wrapper>ul>li>a {
     background: #FFFFFF26;
 }
 
-.jui-sidebar-wrpaer ul li a .menu-dropdown-icon {
+.jui-sidebar-wrapper ul li a .menu-dropdown-icon {
     visibility: hidden;
     transform: rotate(-90deg);
     transition: transform 0.3s;
 }
 
-.jui-sidebar-wrpaer ul li a .menu-dropdown-icon.toggle-menu {
+.jui-sidebar-wrapper ul li a .menu-dropdown-icon.toggle-menu {
     transform: rotate(0deg);
 }
 
-.jui-sidebar-wrpaer.expand ul li a .menu-dropdown-icon {
+.jui-sidebar-wrapper.expand ul li a .menu-dropdown-icon {
     visibility: visible;
 }
 
-.jui-sidebar-wrpaer ul li a:hover {
+.jui-sidebar-wrapper ul li a:hover {
     background-color: #FFFFFF26;
 }
 
-.jui-sidebar-wrpaer ul li a .menu-icon-wraper {
+.jui-sidebar-wrapper ul li a .menu-icon-wrapper {
     width: 20px;
     display: inline-block;
     display: flex;
     justify-content: center;
 }
 
-.jui-sidebar-wrpaer ul li a .menu-icon-wraper svg {
+.jui-sidebar-wrapper ul li a .menu-icon-wrapper svg {
     font-size: 1rem;
 }
 
-.jui-sidebar-wrpaer ul li ul li a .menu-icon-wraper svg {
+.jui-sidebar-wrapper ul li ul li a .menu-icon-wrapper svg {
     font-size: 0.8rem;
 }
 
-.jui-sidebar-wrpaer.expand ul li a .menu-content {
+.jui-sidebar-wrapper.expand ul li a .menu-content {
     position: absolute;
     visibility: visible;
 }
 
-.jui-sidebar-wrpaer ul li a .menu-content {
+.jui-sidebar-wrapper ul li a .menu-content {
     transition: left 0.5s;
     position: absolute;
     width: calc(100% - 60px);
@@ -118,17 +118,17 @@
     visibility: hidden;
 }
 
-.jui-sidebar-wrpaer ul li ul li a.active {
+.jui-sidebar-wrapper ul li ul li a.active {
     background-color: #0b1b31;
     overflow: hidden;
 }
 
-.jui-sidebar-wrpaer ul li ul li a.active:hover {
+.jui-sidebar-wrapper ul li ul li a.active:hover {
     background-color: #0b1b31;
     color: #ffffff;
 }
 
-.jui-sidebar-wrpaer ul li ul li a.active::before {
+.jui-sidebar-wrapper ul li ul li a.active::before {
     position: absolute;
     content: "";
     width: 2px;
@@ -146,22 +146,22 @@
     font-size: 13px;
 }
 
-.jui-sidebar-wrpaer ul ul {
+.jui-sidebar-wrapper ul ul {
     max-height: 0px;
     overflow: hidden;
     transition: max-height 0.6s ease-in-out;
 }
 
-.jui-sidebar-wrpaer ul ul.toggle-menu {
+.jui-sidebar-wrapper ul ul.toggle-menu {
     max-height: 700px;
     overflow: hidden;
 }
 
-.jui-sidebar-wrpaer ul li a {
+.jui-sidebar-wrapper ul li a {
     position: relative;
 }
 
-.jui-sidebar-wrpaer ul li a .tooltiptext {
+.jui-sidebar-wrapper ul li a .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: #151616c9;
@@ -175,7 +175,7 @@
     left: 80px;
 }
 
-.jui-sidebar-wrpaer ul li a .tooltiptext::after {
+.jui-sidebar-wrapper ul li a .tooltiptext::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -186,10 +186,10 @@
     border-color: transparent #151616c9 transparent transparent;
 }
 
-.jui-sidebar-wrpaer ul li a:hover .tooltiptext {
+.jui-sidebar-wrapper ul li a:hover .tooltiptext {
     visibility: visible;
 }
 
-.jui-sidebar-wrpaer ul li ul li a:hover .tooltiptext {
+.jui-sidebar-wrapper ul li ul li a:hover .tooltiptext {
     visibility: visible;
 }
