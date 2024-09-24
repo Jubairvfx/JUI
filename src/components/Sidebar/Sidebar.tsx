@@ -54,7 +54,7 @@ const Sidebar: React.FC<SidebarProps> = ({ toggleClass, sliderData }) => {
                   <path d="M12 15.6L5.4 9l1.2-1.2L12 13.2l5.4-5.4L18.6 9z" />
                 </svg>
               </div>
-              {!toggleClass && <span className="tooltiptext">{ele.label}</span>}
+              {/* {!toggleClass && <span className="tooltiptext">{ele.label}</span>} */}
             </a>
             <ul className={`${openMenus[ele.label] ? "toggle-menu" : ""}`}>
               {ele.children &&
@@ -79,9 +79,9 @@ const Sidebar: React.FC<SidebarProps> = ({ toggleClass, sliderData }) => {
                       <div className="menu-content">
                         <span>{item.label}</span>
                       </div>
-                      {!toggleClass && (
+                      {/* {!toggleClass && (
                         <span className="tooltiptext">{item.label}</span>
-                      )}
+                      )} */}
                     </a>
                   </li>
                 ))}
